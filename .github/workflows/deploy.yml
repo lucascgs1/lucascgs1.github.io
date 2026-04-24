@@ -31,8 +31,8 @@ jobs:
         run: pnpm install
 
       - name: Build do projeto
-        # O base-href precisa ser igual ao nome do repositório no GitHub para os assets carregarem certo
-        run: pnpm run build --base-href /portfolio/
+        # Como agora o repositório é a raiz (lucascgs1.github.io), o base-href deve ser /
+        run: pnpm run build --base-href /
 
       - name: Deploy no GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
