@@ -1,0 +1,27 @@
+<section id="about" appScrollReveal class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
+  <div class="flex-1 space-y-6">
+    <p class="text-accent-light font-mono text-sm tracking-widest uppercase">{{ translations().hero.category }}</p>
+    <h1 class="text-5xl md:text-7xl font-bold text-text-main">{{ resumeData().name }}</h1>
+    <h2 class="text-2xl md:text-3xl font-medium text-text-muted">{{ resumeData().title }}</h2>
+    <p class="text-base md:text-lg text-text-muted max-w-2xl leading-relaxed">
+      {{ resumeData().summary }}
+    </p>
+    <div class="pt-4 flex gap-4 flex-wrap">
+      <a [href]="'https://' + resumeData().linkedin" target="_blank" class="px-6 py-3 bg-accent hover:bg-accent-light text-white rounded-md font-medium transition-smooth shadow-md">
+        LinkedIn
+      </a>
+      <a [href]="'https://' + resumeData().github" target="_blank" class="px-6 py-3 bg-primary hover:bg-surface-hover text-text-main rounded-md font-medium transition-smooth border border-border shadow-sm">
+        GitHub
+      </a>
+      <a [href]="currentLang() === 'pt' ? '/assets/cv-lucas-pt.pdf' : '/assets/cv-lucas-en.pdf'" target="_blank" class="px-6 py-3 bg-surface hover:bg-surface-hover text-text-main rounded-md font-medium transition-smooth border border-border shadow-sm flex items-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+        </svg>
+        {{ translations().hero.downloadCv }}
+      </a>
+    </div>
+  </div>
+  <div class="w-64 h-64 md:w-80 md:h-80 relative rounded-full p-2 border-2 border-border overflow-hidden group">
+    <img ngSrc="assets/profile.jpg" alt="Lucas Coutinho" fill priority class="object-cover rounded-full group-hover:scale-105 transition-smooth" />
+  </div>
+</section>

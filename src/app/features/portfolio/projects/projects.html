@@ -1,0 +1,30 @@
+<section id="projects" appScrollReveal class="py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+  <app-section-title number="02" [title]="translations().projects.title"></app-section-title>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    @for (project of resumeData().projects; track $index) {
+      <a [href]="project.url" target="_blank" class="block bg-surface p-6 rounded-lg border border-border hover:-translate-y-2 hover:border-accent-light/50 shadow-sm transition-smooth group flex flex-col h-full focus:outline-none focus:ring-2 focus:ring-accent-light">
+        <div class="flex justify-between items-center mb-6">
+          <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-10 h-10 text-accent-light">
+            <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+          </svg>
+          <div class="text-text-muted group-hover:text-accent-light transition-smooth">
+            <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+          </div>
+        </div>
+        <h3 class="text-xl font-bold text-text-main mb-2 group-hover:text-accent transition-smooth">{{ project.name }}</h3>
+        <p class="text-text-muted text-sm flex-1">{{ project.description }}</p>
+      </a>
+    }
+  </div>
+  
+  <div class="mt-12 text-center">
+    <a [href]="'https://' + resumeData().github" target="_blank" class="inline-block px-6 py-3 bg-primary border border-border text-text-main hover:bg-surface-hover rounded-md font-mono text-sm transition-smooth shadow-sm focus:outline-none focus:ring-2 focus:ring-accent-light">
+      {{ translations().projects.seeMore }}
+    </a>
+  </div>
+</section>

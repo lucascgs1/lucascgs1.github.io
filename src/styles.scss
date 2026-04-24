@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #ffffff;
+  --color-surface: #f8fafc;
+  --color-surface-hover: #f1f5f9;
+  --color-accent: #0f172a;
+  --color-accent-light: #334155;
+  --color-text-main: #0f172a;
+  --color-text-muted: #64748b;
+  --color-border: #e2e8f0;
+  --color-glass-bg: rgba(255, 255, 255, 0.9);
+}
+
+.dark {
+  --color-primary: #0f172a;
+  --color-surface: #1e293b;
+  --color-surface-hover: #334155;
+  --color-accent: #0284c7;
+  --color-accent-light: #38bdf8;
+  --color-text-main: #f8fafc;
+  --color-text-muted: #94a3b8;
+  --color-border: rgba(255, 255, 255, 0.05);
+  --color-glass-bg: rgba(30, 41, 59, 0.8);
+}
+
+body {
+  @apply bg-primary text-text-main font-sans antialiased m-0 p-0 transition-smooth;
+}
+
+.glass {
+  background-color: var(--color-glass-bg);
+  @apply backdrop-blur-md border-b border-border shadow-sm;
+}
+
+.transition-smooth {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}

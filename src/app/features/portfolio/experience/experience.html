@@ -1,0 +1,27 @@
+<section id="experience" appScrollReveal class="py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+  <app-section-title number="03" [title]="translations().experience.title"></app-section-title>
+
+  <div class="relative border-l border-border ml-4 md:ml-0">
+    @for (job of resumeData().experience; track $index) {
+      <div class="mb-10 ml-8 group">
+        <div class="absolute -left-2 w-4 h-4 bg-primary rounded-full border-2 border-border group-hover:bg-accent group-hover:border-accent transition-smooth"></div>
+        
+        <div class="p-6 bg-surface rounded-lg hover:bg-surface-hover transition-smooth border border-border shadow-sm">
+          <h3 class="text-xl font-semibold text-text-main">
+            {{ job.role }} <span class="text-accent-light">@ {{ job.company }}</span>
+          </h3>
+          <p class="text-sm text-text-muted mb-4 font-mono mt-1">{{ job.period }}</p>
+          
+          <ul class="space-y-2">
+            @for (desc of job.description; track $index) {
+              <li class="flex items-start text-text-muted">
+                <span class="text-accent-light mr-2 mt-1">▹</span>
+                <span class="text-sm md:text-base leading-relaxed" [innerHTML]="desc | highlight:['Angular', 'TypeScript', 'AWS', 'Microfrontends', 'RxJS', 'NgRx', 'Jenkins', 'Scrum', 'Karma']"></span>
+              </li>
+            }
+          </ul>
+        </div>
+      </div>
+    }
+  </div>
+</section>

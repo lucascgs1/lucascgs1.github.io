@@ -1,0 +1,19 @@
+<footer id="contact" class="py-16 mt-20 bg-surface border-t border-border" appScrollReveal>
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-10">
+      <h2 class="text-3xl font-bold text-text-main mb-4">{{ translations().footer.contactMe }}</h2>
+      <p class="text-text-muted">{{ translations().footer.contactText }}</p>
+    </div>
+
+    <app-contact-form></app-contact-form>
+
+    <div class="flex flex-col items-center text-text-muted font-mono text-sm">
+      <div class="flex justify-center space-x-6 mb-4">
+        <a [href]="'mailto:' + resumeData().email" class="hover:text-accent-light transition-smooth">Email</a>
+        <a [href]="'https://' + resumeData().linkedin" target="_blank" class="hover:text-accent-light transition-smooth">LinkedIn</a>
+        <a [href]="'https://' + resumeData().github" target="_blank" class="hover:text-accent-light transition-smooth">GitHub</a>
+      </div>
+      <p>{{ translations().footer.developedBy }} <span class="text-accent-light">{{ resumeData().name }}</span> &copy; 2026</p>
+    </div>
+  </div>
+</footer>

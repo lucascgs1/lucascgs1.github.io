@@ -1,0 +1,41 @@
+<section id="skills" appScrollReveal class="py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+  <app-section-title number="01" [title]="translations().skills.title"></app-section-title>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div class="bg-surface p-6 rounded-lg border border-border hover:border-accent/30 transition-smooth shadow-sm">
+      <h3 class="text-lg font-semibold text-text-main mb-4">{{ translations().skills.cat1 }}</h3>
+      <div class="flex flex-wrap gap-2">
+        @for (skill of resumeData().skills.languagesAndFrameworks; track $index) {
+          <span class="px-3 py-1 bg-primary text-accent-light text-sm font-mono rounded border border-border">{{ skill }}</span>
+        }
+      </div>
+    </div>
+
+    <div class="bg-surface p-6 rounded-lg border border-border hover:border-accent/30 transition-smooth shadow-sm">
+      <h3 class="text-lg font-semibold text-text-main mb-4">{{ translations().skills.cat2 }}</h3>
+      <div class="flex flex-wrap gap-2">
+        @for (skill of resumeData().skills.architecture; track $index) {
+          <span class="px-3 py-1 bg-primary text-accent-light text-sm font-mono rounded border border-border">{{ skill }}</span>
+        }
+      </div>
+    </div>
+
+    <div class="bg-surface p-6 rounded-lg border border-border hover:border-accent/30 transition-smooth shadow-sm">
+      <h3 class="text-lg font-semibold text-text-main mb-4">{{ translations().skills.cat3 }}</h3>
+      <div class="flex flex-wrap gap-2">
+        @for (skill of resumeData().skills.devopsAndCloud; track $index) {
+          <span class="px-3 py-1 bg-primary text-accent-light text-sm font-mono rounded border border-border">{{ skill }}</span>
+        }
+      </div>
+    </div>
+
+    <div class="bg-surface p-6 rounded-lg border border-border hover:border-accent/30 transition-smooth shadow-sm">
+      <h3 class="text-lg font-semibold text-text-main mb-4">{{ translations().skills.cat4 }}</h3>
+      <div class="flex flex-wrap gap-2">
+        @for (skill of resumeData().skills.methodologies; track $index) {
+          <span class="px-3 py-1 bg-primary text-accent-light text-sm font-mono rounded border border-border">{{ skill }}</span>
+        }
+      </div>
+    </div>
+  </div>
+</section>
