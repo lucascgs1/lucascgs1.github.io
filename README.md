@@ -6,7 +6,7 @@ Bem-vindo ao meu perfil do GitHub! Sou um Desenvolvedor apaixonado por criar apl
 
 - 🎯 Atualmente, meu foco principal é no ecossistema front-end, especialmente utilizando **Angular**.
 - 💡 Gosto de construir arquiteturas limpas, modulares (como LIFT) e explorar novas features como Signals e aplicações PWA.
-- 🚀 Busco sempre escrever códigos testáveis, com alta cobertura e de fácil manutenção.
+- 🛡️ **Qualidade de Código em 1º lugar:** Tenho uma forte preocupação com a excelência técnica. Aplico princípios de Clean Code, SOLID e padrões de projeto (Design Patterns) para garantir que as aplicações sejam robustas. Para mim, um bom código é legível, testável e fácil de manter a longo prazo (focando em alta cobertura de testes com ferramentas como Vitest).
 - 🌱 Estou sempre aprendendo novas tecnologias e aprimorando minhas habilidades em arquitetura de software e UI/UX.
 
 ## 🛠️ Minhas Habilidades & Tecnologias
@@ -40,6 +40,3 @@ Bem-vindo ao meu perfil do GitHub! Sou um Desenvolvedor apaixonado por criar apl
 
 - **LinkedIn:** [Lucas Coutinho](https://www.linkedin.com/in/lucascgs1/)
 - **GitHub:** [@lucascgs1](https://github.com/lucascgs1)
-
----
-⭐️ *Sinta-se à vontade para explorar meus repositórios, especialmente meu [Portfólio Angular](https://github.com/lucascgs1/portfolio)!*
