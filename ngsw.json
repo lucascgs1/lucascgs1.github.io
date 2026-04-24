@@ -1,0 +1,81 @@
+{
+  "configVersion": 1,
+  "timestamp": 1777041498710,
+  "index": "/portfolio/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/portfolio/favicon.ico",
+        "/portfolio/index.html",
+        "/portfolio/main-ZSNPUMAV.js",
+        "/portfolio/manifest.webmanifest",
+        "/portfolio/styles-4YRP4KJB.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/portfolio/assets/profile.jpg",
+        "/portfolio/favicon.png",
+        "/portfolio/icons/icon-128x128.png",
+        "/portfolio/icons/icon-144x144.png",
+        "/portfolio/icons/icon-152x152.png",
+        "/portfolio/icons/icon-192x192.png",
+        "/portfolio/icons/icon-384x384.png",
+        "/portfolio/icons/icon-512x512.png",
+        "/portfolio/icons/icon-72x72.png",
+        "/portfolio/icons/icon-96x96.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/portfolio/assets/profile.jpg": "a6e67b28d8d58e034b3e11a0bb6e3783ea8de0fb",
+    "/portfolio/favicon.ico": "07800050aff9b2f8c832064a6f0f897308f06907",
+    "/portfolio/favicon.png": "07800050aff9b2f8c832064a6f0f897308f06907",
+    "/portfolio/icons/icon-128x128.png": "07800050aff9b2f8c832064a6f0f897308f06907",
+    "/portfolio/icons/icon-144x144.png": "07800050aff9b2f8c832064a6f0f897308f06907",
+    "/portfolio/icons/icon-152x152.png": "07800050aff9b2f8c832064a6f0f897308f06907",
+    "/portfolio/icons/icon-192x192.png": "07800050aff9b2f8c832064a6f0f897308f06907",
+    "/portfolio/icons/icon-384x384.png": "07800050aff9b2f8c832064a6f0f897308f06907",
+    "/portfolio/icons/icon-512x512.png": "07800050aff9b2f8c832064a6f0f897308f06907",
+    "/portfolio/icons/icon-72x72.png": "07800050aff9b2f8c832064a6f0f897308f06907",
+    "/portfolio/icons/icon-96x96.png": "07800050aff9b2f8c832064a6f0f897308f06907",
+    "/portfolio/index.html": "a6a5476b1c2d75bff426543fc65f40f04bb147e4",
+    "/portfolio/main-ZSNPUMAV.js": "55d79f4e5c0eac22a0e80d7e031b57432e5632b5",
+    "/portfolio/manifest.webmanifest": "b9a4a9cfcf9b374edc490f84dbf6877e54a57404",
+    "/portfolio/styles-4YRP4KJB.css": "87d974ac5ce54af93adad629494c20da24d2b2a7"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
