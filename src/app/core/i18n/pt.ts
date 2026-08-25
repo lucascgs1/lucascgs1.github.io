@@ -1,7 +1,7 @@
 import { TranslationDictionary } from './translation.model';
 
 export const pt: TranslationDictionary = {
-  nav: { about: 'Sobre', skills: 'Skills', experience: 'Experiência', projects: 'Projetos', contact: 'Fale Comigo' },
+  nav: { about: 'Sobre', skills: 'Skills', experience: 'Experiência', projects: 'Projetos', education: 'Formação', contact: 'Fale Comigo' },
   hero: { category: 'Engenharia de Software', downloadCv: 'Baixar CV' },
   skills: { 
     title: 'Principais Stacks', 
@@ -11,6 +11,7 @@ export const pt: TranslationDictionary = {
     cat4: 'Metodologias e Testes' 
   },
   experience: { title: 'Onde Trabalhei' },
+  education: { title: 'Formação Acadêmica' },
   projects: { title: 'Outros Projetos', seeMore: 'Ver Mais no GitHub' },
   footer: { 
     developedBy: 'Desenvolvido por',

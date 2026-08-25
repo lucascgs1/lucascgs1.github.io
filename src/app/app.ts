@@ -4,6 +4,7 @@ import { HeroComponent } from './features/portfolio/hero/hero';
 import { SkillsComponent } from './features/portfolio/skills/skills';
 import { ExperienceComponent } from './features/portfolio/experience/experience';
 import { ProjectsComponent } from './features/portfolio/projects/projects';
+import { EducationComponent } from './features/portfolio/education/education';
 import { FooterComponent } from './layout/footer/footer';
 
 @Component({
@@ -16,6 +17,7 @@ import { FooterComponent } from './layout/footer/footer';
     SkillsComponent,
     ExperienceComponent,
     ProjectsComponent,
+    EducationComponent,
     FooterComponent
   ],
   templateUrl: './app.html',

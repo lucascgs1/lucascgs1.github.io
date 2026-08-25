@@ -4,6 +4,7 @@ export interface TranslationDictionary {
     skills: string;
     experience: string;
     projects: string;
+    education: string;
     contact: string;
   };
   hero: {
@@ -18,6 +19,9 @@ export interface TranslationDictionary {
     cat4: string;
   };
   experience: {
+    title: string;
+  };
+  education: {
     title: string;
   };
   projects: {

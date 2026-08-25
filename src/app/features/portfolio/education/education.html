@@ -1,0 +1,15 @@
+<section id="education" appScrollReveal class="py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+  <app-section-title number="04" [title]="translations().education.title"></app-section-title>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    @for (edu of resumeData().education; track $index) {
+      <div class="p-6 bg-surface rounded-lg border border-border hover:border-accent/30 transition-smooth shadow-sm">
+        <h3 class="text-lg font-semibold text-text-main">{{ edu.course }}</h3>
+        @if (edu.institution) {
+          <p class="text-accent-light text-sm mt-1">{{ edu.institution }}</p>
+        }
+        <p class="text-sm text-text-muted font-mono mt-1">{{ edu.period }}</p>
+      </div>
+    }
+  </div>
+</section>
