@@ -50,7 +50,15 @@ describe('LanguageService', () => {
 
   it('deve inicializar com o idioma salvo no localStorage se existir', () => {
     localStorage.setItem('lang', 'en');
-    const newService = new LanguageService('browser');
+    const newService = new LanguageService('browser', document);
     expect(newService.currentLang()).toBe('en');
+  });
+
+  it('deve atualizar o atributo lang do documento ao trocar de idioma', () => {
+    service.toggleLang();
+    expect(document.documentElement.lang).toBe('en');
+
+    service.toggleLang();
+    expect(document.documentElement.lang).toBe('pt');
   });
 });

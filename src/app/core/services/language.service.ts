@@ -1,5 +1,5 @@
 import { Injectable, signal, computed, Inject, PLATFORM_ID } from '@angular/core';
-import { isPlatformBrowser } from '@angular/common';
+import { DOCUMENT, isPlatformBrowser } from '@angular/common';
 import { pt } from '../i18n/pt';
 import { en } from '../i18n/en';
 import { TranslationDictionary } from '../i18n/translation.model';
@@ -11,21 +11,26 @@ const UI_TRANSLATIONS: Record<Lang, TranslationDictionary> = { pt, en };
 @Injectable({ providedIn: 'root' })
 export class LanguageService {
   currentLang = signal<Lang>('pt');
-  
+
   translations = computed(() => UI_TRANSLATIONS[this.currentLang()]);
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {
+  constructor(
+    @Inject(PLATFORM_ID) private platformId: Object,
+    @Inject(DOCUMENT) private document: Document
+  ) {
     if (isPlatformBrowser(this.platformId)) {
       const saved = localStorage.getItem('lang') as Lang;
       if (saved && (saved === 'pt' || saved === 'en')) {
         this.currentLang.set(saved);
       }
     }
+    this.document.documentElement.lang = this.currentLang();
   }
 
   toggleLang() {
     const newLang = this.currentLang() === 'pt' ? 'en' : 'pt';
     this.currentLang.set(newLang);
+    this.document.documentElement.lang = newLang;
     if (isPlatformBrowser(this.platformId)) {
       localStorage.setItem('lang', newLang);
     }
