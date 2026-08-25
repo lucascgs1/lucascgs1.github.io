@@ -29,7 +29,32 @@
             </svg>
           }
         </button>
+
+        <button (click)="toggleMobileMenu()" class="md:hidden p-2 rounded-full hover:bg-surface-hover transition-smooth border border-border" aria-label="Toggle Menu" [attr.aria-expanded]="isMobileMenuOpen()">
+          @if (isMobileMenuOpen()) {
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-text-main" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          } @else {
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-text-main" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          }
+        </button>
       </div>
     </div>
   </nav>
+
+  @if (isMobileMenuOpen()) {
+    <div class="md:hidden bg-surface border-t border-border">
+      <div class="flex flex-col px-4 sm:px-6 py-4 space-y-4 text-sm font-medium">
+        <a href="#about" (click)="closeMobileMenu()" class="hover:text-accent-light transition-smooth">{{ translations().nav.about }}</a>
+        <a href="#skills" (click)="closeMobileMenu()" class="hover:text-accent-light transition-smooth">{{ translations().nav.skills }}</a>
+        <a href="#projects" (click)="closeMobileMenu()" class="hover:text-accent-light transition-smooth">{{ translations().nav.projects }}</a>
+        <a href="#experience" (click)="closeMobileMenu()" class="hover:text-accent-light transition-smooth">{{ translations().nav.experience }}</a>
+        <a href="#education" (click)="closeMobileMenu()" class="hover:text-accent-light transition-smooth">{{ translations().nav.education }}</a>
+        <a href="#contact" (click)="closeMobileMenu()" class="hover:text-accent-light transition-smooth">{{ translations().nav.contact }}</a>
+      </div>
+    </div>
+  }
 </header>

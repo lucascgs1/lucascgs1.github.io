@@ -11,6 +11,7 @@ import { LanguageService } from '../../core/services/language.service';
 })
 export class HeaderComponent {
   isDarkMode = signal<boolean>(false);
+  isMobileMenuOpen = signal<boolean>(false);
   langService = inject(LanguageService);
   translations = this.langService.translations;
   currentLang = this.langService.currentLang;
@@ -50,5 +51,13 @@ export class HeaderComponent {
   
   toggleLang() {
     this.langService.toggleLang();
+  }
+
+  toggleMobileMenu() {
+    this.isMobileMenuOpen.update(v => !v);
+  }
+
+  closeMobileMenu() {
+    this.isMobileMenuOpen.set(false);
   }
 }
