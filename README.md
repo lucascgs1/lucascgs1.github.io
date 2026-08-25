@@ -1,42 +1,45 @@
-# Olá! 👋 Eu sou o Lucas Coutinho
+# Lucas Coutinho — Portfólio Pessoal
 
-Bem-vindo ao meu perfil do GitHub! Sou um Desenvolvedor apaixonado por criar aplicações web modernas, performáticas e com foco na melhor experiência para o usuário.
+Site pessoal e currículo interativo, publicado em **[lucascgs1.github.io](https://lucascgs1.github.io/)**.
 
-## 👨‍💻 Sobre mim
+## Funcionalidades
 
-- 🎯 Atualmente, meu foco principal é no ecossistema front-end, especialmente utilizando **Angular**.
-- 💡 Gosto de construir arquiteturas limpas, modulares (como LIFT) e explorar novas features como Signals e aplicações PWA.
-- 🛡️ **Qualidade de Código em 1º lugar:** Tenho uma forte preocupação com a excelência técnica. Aplico princípios de Clean Code, SOLID e padrões de projeto (Design Patterns) para garantir que as aplicações sejam robustas. Para mim, um bom código é legível, testável e fácil de manter a longo prazo (focando em alta cobertura de testes com ferramentas como Vitest).
-- 🌱 Estou sempre aprendendo novas tecnologias e aprimorando minhas habilidades em arquitetura de software e UI/UX.
+- **Internacionalização (PT/EN)** — todo o conteúdo, incluindo os dados de currículo, é carregado de forma tipada e traduzida.
+- **PWA instalável** — service worker configurado (`ngsw-config.json`), manifest e ícones para instalação em desktop/mobile.
+- **Currículo em PDF** — download direto das versões PT e EN (`public/assets/cv-lucas-pt.pdf`, `cv-lucas-en.pdf`).
+- **Formulário de contato** integrado à seção de projetos e experiência.
+- **Deploy automático** a cada push na branch principal.
 
-## 🛠️ Minhas Habilidades & Tecnologias
+## Stack
 
-<div align="left">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" height="40" alt="angular logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" height="40" alt="typescript logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="40" alt="javascript logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original-wordmark.svg" height="40" alt="tailwindcss logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="40" alt="css3 logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="40" alt="html5 logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" height="40" alt="nodejs logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" height="40" alt="git logo"  />
-</div>
+- [Angular 21](https://angular.dev/) (standalone components)
+- TypeScript
+- Tailwind CSS
+- Vitest (testes unitários)
+- Angular Service Worker (PWA)
 
-## 📊 Estatísticas do GitHub
+## Rodando localmente
 
+```bash
+pnpm install
+pnpm start   # ng serve — http://localhost:4200
+```
 
-<p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=lucascgs1&theme=radium" alt="Lucas's GitHub streak" />
-</p>
+## Build de produção
 
-## 📬 Como me encontrar
+```bash
+pnpm run build
+```
 
-- **LinkedIn:** [Lucas Coutinho](https://www.linkedin.com/in/lucascgs1/)
+O output vai para `dist/portfolio/browser`.
+
+## Deploy
+
+Todo push nas branches `main`/`master` dispara o workflow em
+[`.github/workflows/deploy.yml`](.github/workflows/deploy.yml), que instala as
+dependências, builda o projeto e publica automaticamente no GitHub Pages.
+
+## Contato
+
+- **LinkedIn:** [linkedin.com/in/lucascgs1](https://www.linkedin.com/in/lucascgs1/)
 - **GitHub:** [@lucascgs1](https://github.com/lucascgs1)
